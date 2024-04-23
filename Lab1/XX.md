@@ -4,7 +4,7 @@
 
 # 3. Xúc xắc
 
-## 3.1 Phân tích và thiết kế
+## 3.1. Phân tích và thiết kế
 
 ### 3.1.1. Khối counter 1-6
 
@@ -188,19 +188,43 @@ Tiến hành kết nối các khối, tạo ra thiết kế module top của b�
 
 ![](./images/xx/main.png)
 
-Có 2 bộ đếm được chạy liên tục với tần số khác nhau để tạo ra các giá trị giả ngẫu nhiên, kết nối tới một bộ cộng để tính giá trị __sum__.
+Có 2 bộ đếm được chạy liên tục với tần số khác nhau để tạo ra các giá trị giả ngẫu nhiên, kết nối tới một bộ cộng để tính giá trị __running_sum__.
 
 ![counters](https://github.com/Qyt0109/VDT2024-Lab-Report/assets/92682344/276f5df4-16a4-4f38-9f40-e40edb60183f)
 
-![](./images/xx/test/counters.gif)
-
-
 Có một D-FF lưu trữ giá trị 1 mỗi khi rst được kích hoạt, và sẽ chỉ giữ giá trị 1 nếu chưa từng bấm roll. Đây sẽ là thanh ghi 1 bit chứa giá trị __is_first__, tương ứng với lần đầu thực hiện việc đổ xúc xắc.
 
-Khi lần đầu đổ xúc xắc, giá trị __sum__ sẽ được chốt bởi thanh ghi __point__ và không thay đổi xuyên suốt quá trình trừ khi tín hiệu __rst__ được kích hoạt.
+![](./images/xx/test/is_first.png)
+
+Khi lần đầu đổ xúc xắc, giá trị __running_sum__ sẽ được chốt bởi thanh ghi __point__ và không thay đổi xuyên suốt quá trình trừ khi tín hiệu __rst__ được kích hoạt. Điều này là do thanh ghi __is_first__ kiểm soát chân __WE__ (write enable).
+
+![](./images/xx/test/point.png)
 
 Với giá trị lần đầu tiên đổ xúc xắc được chốt bởi point, khối __win_lose__ sẽ kiểm tra điều kiện thắng/thua/tiếp. Nếu thắng hoặc thua ngay trong lần đầu, tín hiệu continue sẽ bị tắt, từ đó các bộ mux sẽ lựa chọn kết quả is_win, is_lose để làm kết quả win, lose cuối cùng. Nếu lần đầu chưa thắng hoặc thua, tín hiệu continue sẽ bật, các bộ mux sẽ lựa chọn kết quả is_win, is_lose của khối __win_lose_2__.
 
+![](./images/xx/test/winlose.png)
+
+Giá trị __is_first__ thể hiện trạng thái lần đầu đổ xúc xắc, vậy __nghịch đảo__ của trạng thái này chính là thể hiện việc đổ trong những lần tiếp theo. Cùng với giá trị __continue__ tại khối __win_lose_2__ ta sẽ có được trạng thái đổ xúc xắc ở những lần sau và vẫn có thể tiếp tục đổ. Nếu 1 trong 2 giá trị nói trên = 0 ta sẽ không cho thanh ghi __sum__ ghi dữ liệu lấy từ __running_sum__ mỗi lần tín hiệu __roll__ được kích hoạt.
+
+![](./images/xx/test/sum.png)
+
+Khi thắng/thua ở những lần đổ sau, tín hiệu __continue__ ở khối __win_lose_2__ = 0, kết thúc hoạt động của trò chơi và không cho phép tín hiệu __roll__ tác động lên các thanh ghi nữa. Kết quả cuối sẽ được xuất ra các led win, lose.
+
+![](./images/xx/test/lose_not_first.png)
+
+## 3.2. Thử nghiệm thiết kế
+
+### 3.2.1. Trường hợp thắng/thua ngay lần đầu tiên đổ xúc xắc
+
+#### 3.2.1.1. Thắng ngay lần đầu
+
+#### 3.2.1.2. Thua ngay lần đầu
+
+### 3.2.2. Trường hợp thắng/thua ở những lần tiếp theo đổ xúc xắc
+
+#### 3.2.2.1. Thắng
+
+#### 3.2.2.2. Thua
 
 
 #### [<< Quay trở lại SPEC](./README.md)
