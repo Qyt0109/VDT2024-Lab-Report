@@ -10,9 +10,7 @@
 
 ![](./images/xx/counter1to6_block.png)
 
-#### 3.1.1.1. Thiết kế bộ đếm
-
-##### 3.1.1.1.1. Bảng chuyển trạng thái và ánh xạ sang flip-flop logic
+#### 3.1.1.1. Bảng chuyển trạng thái và ánh xạ sang flip-flop logic
 
 Bảng chuyển trạng thái cần thiết lập:
 
@@ -52,11 +50,11 @@ Ta biến đổi được bảng logic phụ thuộc của các đầu vào D v�
 |||
 |others|xxx|
 
-##### 3.1.1.1.2. Tối ưu hoá biểu thức logic
+#### 3.1.1.2. Tối ưu hoá biểu thức logic
 
 Tiến hành lập các bảng k-map để tối ưu hoá biểu thức logic cho các đầu vào D-FF (D2, D1, D0):
 
-###### a) Tối ưu cho D2:
+##### a) Tối ưu cho D2:
 
 Bảng k-map:
 
@@ -141,7 +139,7 @@ Nhóm được nhóm minterm sau:
 
 __=> D0 = S0'__
 
-##### 3.1.1.1.3. Kết nối và hoàn thành thiết kế
+#### 3.1.1.3. Kết nối và hoàn thành thiết kế
 
 Với các biểu thức logic như đã phân tích, ta thiết kế được một bộ đếm chuyển trạng thái từ 1-6:
 
@@ -154,8 +152,45 @@ Khi tín hiệu __rst__ được kích hoạt, trạng thái của mạch chuy�
 
 Mỗi chu kỳ tín hiệu __clk__ sẽ chuyển trạng thái đúng như yêu cầu.
 
+### 3.1.2. Khối kiểm tra thắng/thua/tiếp
 
+#### 3.1.2.1. Thắng/thua/tiếp trong lần đầu tiên đổ xúc xắc
 
+Trong lần đầu đổ xúc xắc, kết quả thắng/thua/tiếp của mạch phụ thuộc vào giá trị của sum (tổng 2 bộ đếm counter):
+
+|sum|trạng thái|sum|trạng thái|
+|:--:|:--:|:--:|:--:|
+|2|lose|7|win|
+|3|lose|11|win|
+|12|lose|||
+|||||
+|others|continue|||
+
+![](./images/xx/win_lose.png)
+
+#### 3.1.2.1. Thắng/thua/tiếp trong những lần tiếp theo đổ xúc xắc
+
+Nếu lần đầu đổ xúc xắc không đem lại kết quả thắng hay thua, tiến hành kiểm tra giá trị sum được lưu lúc trước trong point với giá trị sum ở lần đổ hiện tại. Nếu so sánh hai giá trị bằng nhau => thắng, nếu không thì tiếp tục đổ. Trường hợp đổ phải số 2 => thua.
+
+Nếu hiện tại đang là lần đổ đầu tiên (is_first = 1), mạch sẽ mặc định cho kết quả là tiếp tục (is_lose = 0, is_win = 0, continue = 1) mà không phụ thuộc vào sum và point.
+
+|sum|trạng thái|sum|trạng thái|
+|:--:|:--:|:--:|:--:|
+|2|lose|point|win|
+|||||
+|others|continue|||
+
+![](./images/xx/win_lose_2.png)
+
+### 3.1.3. Kết nối các khối
+
+Tiến hành kết nối các khối, tạo ra thiết kế module top của bộ xúc xắc này:
+
+![](./images/xx/main.png)
+
+Có 2 bộ đếm được chạy liên tục với tần số khác nhau để tạo ra các giá trị giả ngẫu nhiên, kết nối tới một bộ cộng để tính giá trị __sum__.
+
+Khi lần đầu đổ xúc xắc, giá trị __sum__ sẽ được chốt bởi thanh ghi __point__ và không thay đổi xuyên suốt quá trình trừ khi tín hiệu __rst__ được kích hoạt.
 
 #### [<< Quay trở lại SPEC](./README.md)
 
