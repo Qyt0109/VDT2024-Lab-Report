@@ -204,3 +204,43 @@ Module này thực hiện phép toán số học với các đầu vào.
 
 #### 2.2.1.1. Phép cộng (ADD)
 
+##### 2.2.1.1.1. Cộng 2 số dương
+
+###### a) Tính toán hợp lệ:
+
+![](./images/test/arith/pospos_ok.png)
+
+0011 (3) + 0001 (1) = 0100 (4)
+
+###### b) Bị tràn số:
+
+![](./images/test/arith/pospos.png)
+
+0110 (6) + 0101 (5) = ~~1011 (-5)~~
+
+##### 2.2.1.1.2. Cộng 2 số âm
+
+###### a) Tính toán hợp lệ
+
+![](./images/test/arith/negneg_ok.png)
+
+1110 (-2) + 1100 (-4) = 1010 (-6)
+
+###### b) Bị tràn số
+
+![](./images/test/arith/negneg.png)
+
+1010 (-6) + 1011 (-5) = ~~0101 (5)~~
+
+##### 2.2.1.1.3. Cộng số âm dương
+
+![](./images/test/arith/posneg.png)
+
+1010 (-6) + 0100 (4) = 1110 (-2)
+
+#### 2.2.1.2. Phép trừ (SUB)
+
+##### 2.2.1.2.1. Trừ 2 số dương
+
+###### a) Tính toán hợp lệ
+
