@@ -30,3 +30,11 @@ Mô tả: Sơ đồ khối của xúc xắc điện tử được cho ở Hình 
 
 ![](./images/spec/xucxacdiagram.png)
 <p style="text-align:center; "><i><b>Sơ đồ thuật toán</b></i></p>
+
+### Bài làm:
+
+#### [>> File Logisim](./Logisim/xx.circ)
+
+### Phân tích thiết kế và thử nghiệm:
+
+#### [>> Xúc xắc report](./XX.md)
