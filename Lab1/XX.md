@@ -2,6 +2,8 @@
 
 #### [<< ALU](./ALU.md)
 
+___
+
 # 3. Xúc xắc
 
 ## 3.1. Phân tích và thiết kế
@@ -240,6 +242,7 @@ https://github.com/Qyt0109/VDT2024-Lab-Report/assets/92682344/e3854b8b-4669-4348
 https://github.com/Qyt0109/VDT2024-Lab-Report/assets/92682344/9cca4358-aba9-495b-96f6-8f352a358148
 
 
+___
 
 #### [<< Quay trở lại SPEC](./README.md)
 

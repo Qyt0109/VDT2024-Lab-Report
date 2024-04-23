@@ -2,6 +2,8 @@
 
 #### [Xúc xắc >>](./XX.md)
 
+___
+
 # 2. ALU
 
 ## 2.1. Phân tích và thiết kế
@@ -340,6 +342,8 @@ SHR 1011 = 0101
 ![](./images/test/default/mov.png)
 
 c_out = b_in = 1100
+
+___
 
 #### [<< Quay trở lại SPEC](./README.md)
 

@@ -1,3 +1,7 @@
+#### [ALU >>](./ALU.md)
+#### [Xúc xắc >>](./XX.md)
+___
+
 # 1. SPEC
 # 1.1. Thiết kế bộ ALU đơn giản
 ``` verilog
@@ -38,3 +42,8 @@ Mô tả: Sơ đồ khối của xúc xắc điện tử được cho ở Hình 
 ### Phân tích thiết kế và thử nghiệm:
 
 #### [>> Xúc xắc report](./XX.md)
+
+___
+
+#### [ALU >>](./ALU.md)
+#### [Xúc xắc >>](./XX.md)
