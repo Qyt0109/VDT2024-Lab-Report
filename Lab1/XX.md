@@ -190,6 +190,10 @@ Tiến hành kết nối các khối, tạo ra thiết kế module top của b�
 
 Có 2 bộ đếm được chạy liên tục với tần số khác nhau để tạo ra các giá trị giả ngẫu nhiên, kết nối tới một bộ cộng để tính giá trị __sum__.
 
+![counters](https://github.com/Qyt0109/VDT2024-Lab-Report/assets/92682344/276f5df4-16a4-4f38-9f40-e40edb60183f)
+
+![](./images/xx/test/counters.gif)
+
 
 Có một D-FF lưu trữ giá trị 1 mỗi khi rst được kích hoạt, và sẽ chỉ giữ giá trị 1 nếu chưa từng bấm roll. Đây sẽ là thanh ghi 1 bit chứa giá trị __is_first__, tương ứng với lần đầu thực hiện việc đổ xúc xắc.
 
