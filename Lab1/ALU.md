@@ -14,8 +14,8 @@ Bảng chân lý:
 |0011|OR |1011|__SHR__|
 |0100|XOR|1100|__ROL__|
 |0110|__XNOR__|1110|__ROR__|
-|
-|Others|MOV|
+|||||
+|Others|MOV|||
 
 *Các phép toán được __in đậm__ là những phép được mở rộng thêm so với đề bài gốc.
 
