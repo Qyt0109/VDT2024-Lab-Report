@@ -245,5 +245,65 @@ Module này thực hiện phép toán số học với các đầu vào.
 
 ##### 2.2.1.2.1. Trừ 2 số dương
 
+![](./images/test/arith_sub/pospos_ok.png)
+
+0110 (6) - 0011 (3) = 0011 (3)
+
+![](./images/test/arith_sub/pospos_ok1.png)
+
+0100 (4) - 0111 (7) = 1101 (-3)
+
+##### 2.2.1.2.2. Trừ 2 số âm
+
+![](./images/test/arith_sub/negneg_ok.png)
+
+1000 (-8) - 1111 (-1) = 1001 (-7)
+
+![](./images/test/arith_sub/negneg_ok1.png)
+
+1111 (-1) - 1010 (-6) = 0101 (5)
+
+##### 2.2.1.2.3. Trừ số âm cho số dương
+
 ###### a) Tính toán hợp lệ
 
+![](./images/test/arith_sub/negpos_ok.png)
+
+1111 (-1) - 0011 (3) = 1100 (-4)
+
+###### b) Bị tràn số
+
+![](./images/test/arith_sub/negpos.png)
+
+1000 (-8) - 0100 (4) = ~~0100 (4)~~
+
+##### 2.2.1.2.4. Trừ số dương cho số âm
+
+###### a) Tính toán hợp lệ
+
+![](./images/test/arith_sub/posneg_ok.png)
+
+0011 (3) - 1110 (-2) = 0101 (5)
+
+###### b) Bị tràn số
+
+![](./images/test/arith_sub/posneg.png)
+
+0111 (7) - 1011 (-5) = ~~1100 (-4)~~
+
+#### 2.2.1.3. Phép nhân (MUL)
+
+![](./images/test/arith_mul/mul.png)
+
+Tích ({extra, result}):
+1011 (11) * 0011 (3) = 0010 0001 (33)
+
+#### 2.2.1.4. Phép chia (DIV)
+
+![](./images/test/arith_div/div.png)
+
+Thương (result):
+1011 (11) / 0011 (3) = 0011 (3)
+
+Dư (extra):
+1011 (11) % 0011 (3) = 0010 (2)
