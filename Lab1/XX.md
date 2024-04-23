@@ -190,9 +190,14 @@ Tiến hành kết nối các khối, tạo ra thiết kế module top của b�
 
 Có 2 bộ đếm được chạy liên tục với tần số khác nhau để tạo ra các giá trị giả ngẫu nhiên, kết nối tới một bộ cộng để tính giá trị __sum__.
 
+
+Có một D-FF lưu trữ giá trị 1 mỗi khi rst được kích hoạt, và sẽ chỉ giữ giá trị 1 nếu chưa từng bấm roll. Đây sẽ là thanh ghi 1 bit chứa giá trị __is_first__, tương ứng với lần đầu thực hiện việc đổ xúc xắc.
+
 Khi lần đầu đổ xúc xắc, giá trị __sum__ sẽ được chốt bởi thanh ghi __point__ và không thay đổi xuyên suốt quá trình trừ khi tín hiệu __rst__ được kích hoạt.
 
 Với giá trị lần đầu tiên đổ xúc xắc được chốt bởi point, khối __win_lose__ sẽ kiểm tra điều kiện thắng/thua/tiếp. Nếu thắng hoặc thua ngay trong lần đầu, tín hiệu continue sẽ bị tắt, từ đó các bộ mux sẽ lựa chọn kết quả is_win, is_lose để làm kết quả win, lose cuối cùng. Nếu lần đầu chưa thắng hoặc thua, tín hiệu continue sẽ bật, các bộ mux sẽ lựa chọn kết quả is_win, is_lose của khối __win_lose_2__.
+
+
 
 #### [<< Quay trở lại SPEC](./README.md)
 
