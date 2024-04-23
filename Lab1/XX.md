@@ -218,13 +218,27 @@ Khi thắng/thua ở những lần đổ sau, tín hiệu __continue__ ở khố
 
 #### 3.2.1.1. Thắng ngay lần đầu
 
+https://github.com/Qyt0109/VDT2024-Lab-Report/assets/92682344/14a7bd40-69f7-4460-b540-ce79ecdd166e
+
 #### 3.2.1.2. Thua ngay lần đầu
+
+
+https://github.com/Qyt0109/VDT2024-Lab-Report/assets/92682344/90bbfada-6b9a-47ca-871f-2893f18c3ba5
+
 
 ### 3.2.2. Trường hợp thắng/thua ở những lần tiếp theo đổ xúc xắc
 
 #### 3.2.2.1. Thắng
 
+
+https://github.com/Qyt0109/VDT2024-Lab-Report/assets/92682344/e3854b8b-4669-4348-8f37-579faa48a266
+
+
 #### 3.2.2.2. Thua
+
+
+https://github.com/Qyt0109/VDT2024-Lab-Report/assets/92682344/9cca4358-aba9-495b-96f6-8f352a358148
+
 
 
 #### [<< Quay trở lại SPEC](./README.md)
