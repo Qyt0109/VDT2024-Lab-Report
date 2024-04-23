@@ -147,6 +147,9 @@ Với các biểu thức logic như đã phân tích, ta thiết kế được m
 
 ![](./images/xx/counter1to6.png)
 
+![counter1to6](https://github.com/Qyt0109/VDT2024-Lab-Report/assets/92682344/5b7f936f-fb95-4177-832f-dd996f4cdf07)
+
+
 Khi tín hiệu __rst__ được kích hoạt, trạng thái của mạch chuyển về S2S1S0 = 001, tương ứng với giá trị 1.
 
 Mỗi chu kỳ tín hiệu __clk__ sẽ chuyển trạng thái đúng như yêu cầu.
