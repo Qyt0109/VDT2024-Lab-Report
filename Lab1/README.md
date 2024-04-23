@@ -10,6 +10,9 @@ case(i_op[3:0])
                                             // .... 
  default:   o_c   <= i_b;                   // MOV
 ```
+
+### Bài làm: [>> File Logisim](./Logisim/alu.circ)
+
 # 1.2. Xúc xắc điện tử
 
 Mô tả: Sơ đồ khối của xúc xắc điện tử được cho ở Hình 1. Hai counter được sử dụng để mô phỏng việc tung 2 xúc xắc. Mỗi counter đếm chuỗi sau 1,2,3,4,5,6,1,2, ... Theo đó, sau khi tung 2 xúc xắc, tổng của các giá trị trong 2 counter sẽ có giá trị từ 2 đến 12. Luật chơi như sau: 
